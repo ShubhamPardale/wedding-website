@@ -1,128 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarah & James | Wedding</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-subtitle">We're Getting Married</p>
-      <h1 class="hero-title">Sarah <span class="ampersand">&</span> James</h1>
-      <p class="hero-date">March 15, 2025</p>
-    </div>
-    <div class="scroll-hint">↓</div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya & Apurva | Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Aditya & Apurva</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-current">Home</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="things-to-do.html">Things To Do</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
-  <!-- Our Story -->
-  <section class="section story-section">
-    <h2 class="section-title">Our Story</h2>
-    <div class="story-content">
-      <p>
-        We met on a rainy autumn evening at a cozy coffee shop. What started as a chance encounter 
-        over spilled lattes turned into late-night conversations, weekend adventures, and a love 
-        that grew stronger with each passing season.
-      </p>
-      <p>
-        After five wonderful years together, we can't wait to celebrate our forever with the people 
-        who mean the most to us. We hope you'll join us for this special day!
-      </p>
-    </div>
-  </section>
-
-  <!-- Wedding Details -->
-  <section class="section details-section">
-    <h2 class="section-title">Wedding Details</h2>
-    <div class="details-grid">
-      <div class="detail-card">
-        <div class="detail-icon">📅</div>
-        <h3>Date & Time</h3>
-        <p>Saturday, March 15, 2025</p>
-        <p>Ceremony: 4:00 PM</p>
-        <p>Reception: 6:00 PM</p>
-      </div>
-      <div class="detail-card">
-        <div class="detail-icon">📍</div>
-        <h3>Venue</h3>
-        <p>The Garden Estate</p>
-        <p>123 Blossom Lane</p>
-        <p>Meadowbrook, CA 90210</p>
-      </div>
-      <div class="detail-card">
-        <div class="detail-icon">👗</div>
-        <h3>Dress Code</h3>
-        <p>Semi-Formal</p>
-        <p>Cocktail attire</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- RSVP Section -->
-  <section class="section rsvp-section" id="rsvp">
-    <h2 class="section-title">RSVP</h2>
-    <p class="rsvp-subtitle">Please respond by February 1, 2025</p>
-    
-    <div id="rsvp-form-container">
-      <form class="rsvp-form" id="rsvp-form" action="https://formspree.io/f/xbdavdar" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Your full name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
-          </div>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-marquee">
+        <div class="hero-marquee-track">
+          <img src="image 1.jpeg" alt="Aditya & Apurva" />
+          <img src="image 2.jpeg" alt="Aditya & Apurva" />
+          <img src="image 3.jpeg" alt="Aditya & Apurva" />
+          <img src="image 4.jpeg" alt="Aditya & Apurva" />
+          <img src="image 1.jpeg" alt="Aditya & Apurva" />
+          <img src="image 2.jpeg" alt="Aditya & Apurva" />
+          <img src="image 3.jpeg" alt="Aditya & Apurva" />
+          <img src="image 4.jpeg" alt="Aditya & Apurva" />
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="guests">Number of Guests *</label>
-            <select id="guests" name="guests" required>
-              <option value="">Select</option>
-              <option value="1">1 (Just me)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5+</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="attendance">Attendance *</label>
-            <select id="attendance" name="attendance" required>
-              <option value="">Select</option>
-              <option value="yes">Joyfully Accept</option>
-              <option value="no">Regretfully Decline</option>
-            </select>
-          </div>
+      </div>
+      <!-- <div class="floral-corner floral-top-right" aria-hidden="true"></div> -->
+      <!-- <div class="floral-corner floral-bottom-left" aria-hidden="true"></div> -->
+      <div class="hero-main">
+        <img
+          src="bgimgright.jpeg"
+          class="hero-top-right-img"
+          alt="Floral Decoration"
+        />
+        <img
+          src="bgimgleft.jpeg"
+          class="hero-left-img"
+          alt="Floral Decoration"
+        />
+        <div class="hero-content">
+          <h2 class="hero-name-first">Apurva</h2>
+          <p class="hero-and">and</p>
+          <h2 class="hero-name-second">Aditya</h2>
+          <p class="hero-hashtag">#AdityaApurva</p>
+          <p class="hero-date">November 30, 2025</p>
+          <p class="hero-location">Portland, OR</p>
+          <a href="rsvp.html" class="hero-rsvp-btn">RSVP</a>
         </div>
-        <div class="form-group">
-          <label for="message">Message (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Any dietary restrictions or special requests?"></textarea>
-        </div>
-        <button type="submit" class="rsvp-button">Send RSVP</button>
-      </form>
-    </div>
+        <p class="hero-tagline">For all the days along the way</p>
+      </div>
+    </section>
 
-    <div id="rsvp-success" class="rsvp-success hidden">
-      <div class="success-icon">✓</div>
-      <h3>Thank You!</h3>
-      <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
-    </div>
-  </section>
+    <footer class="footer">
+      <p>For all the days along the way</p>
+      <p class="footer-note">— Aditya & Apurva —</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>With love, Sarah & James</p>
-    <p class="footer-note">— See you on our special day —</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

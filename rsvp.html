@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP | Aditya & Apurva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Aditya & Apurva</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rsvp.html" class="nav-current">RSVP</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="things-to-do.html">Things To Do</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="page-content">
+    <section class="section rsvp-section">
+      <h1 class="section-title">RSVP</h1>
+      <p class="rsvp-subtitle">Please respond by November 1, 2025</p>
+      
+      <div id="rsvp-form-container">
+        <form class="rsvp-form" id="rsvp-form" action="https://formspree.io/f/xbdavdar" method="POST">
+          <input type="hidden" name="_subject" value="Aditya & Apurva Wedding RSVP">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guests">Number of Guests *</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select</option>
+                <option value="1">1 (Just me)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="attendance">Attendance *</label>
+              <select id="attendance" name="attendance" required>
+                <option value="">Select</option>
+                <option value="yes">Joyfully Accept</option>
+                <option value="no">Regretfully Decline</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Any dietary restrictions or special requests?"></textarea>
+          </div>
+          <button type="submit" class="rsvp-button">Send RSVP</button>
+        </form>
+      </div>
+
+      <div id="rsvp-success" class="rsvp-success hidden">
+        <div class="success-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>For all the days along the way</p>
+    <p class="footer-note">— Aditya & Apurva —</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
