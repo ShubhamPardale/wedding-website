@@ -131,7 +131,7 @@ body {
 .hero-marquee-track {
   display: flex;
   gap: 0;
-  animation: marquee 25s linear infinite;
+  animation: marquee 35s linear infinite;
   width: max-content;
   height: 100%;
 }
