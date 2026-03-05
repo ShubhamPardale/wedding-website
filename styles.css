@@ -1,11 +1,15 @@
 /* Zola-style Wedding Website - Aditya & Apurva */
 :root {
-  --color-cream: #faf8f5;
-  --color-ivory: #fffef9;
-  --color-sage: #8b9a8b;
-  --color-rose: #c4a4a4;
-  --color-charcoal: #2c2c2c;
-  --color-soft-brown: #5c5346;
+  --color-cream: #fff7ed;
+  --color-ivory: #fffaf5;
+  --color-sage: #8b5e34;
+  --color-rose: #c62828;
+  --color-charcoal: #4e342e;
+  --color-soft-brown: #8d6e63;
+
+  --color-gold: #c9a227;
+  --color-maroon: #7a1c1c;
+
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Montserrat", -apple-system, sans-serif;
 }
@@ -27,6 +31,7 @@ body {
   background: var(--color-ivory);
   line-height: 1.6;
   overflow-x: hidden;
+  background-image: url("indian-pattern.jpg");
 }
 
 /* Navigation - centered two-line layout */
@@ -41,20 +46,22 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: rgba(250, 250, 250, 0.98);
+  background-image: url("indian-pattern.jpg");
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .nav-logo {
-  font-family: var(--font-display);
+  /* font-family: var(--font-display); */
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--color-charcoal);
+  color: white;
   text-decoration: none;
   letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
   white-space: nowrap;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400; /* Pinyon Script typically has only one weight */
 }
 
 .nav-links {
@@ -64,6 +71,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .nav-links a {
@@ -71,7 +79,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-soft-brown);
+  color: white;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -81,8 +89,8 @@ body {
 }
 
 .nav-links a.nav-current {
-  color: var(--color-charcoal);
-  font-weight: 600;
+  color: white;
+  font-weight: 700;
 }
 
 .nav-toggle {
@@ -99,6 +107,19 @@ body {
   width: 24px;
   height: 2px;
   background: var(--color-charcoal);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: url("mandala-top.png") repeat-x center;
+  background-size: contain;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 /* Hero Section - Zola style */
@@ -167,7 +188,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: #fff;
+  background-image: url("indian-pattern.jpg");
   pointer-events: none;
   z-index: -1;
 }
@@ -182,10 +203,11 @@ body {
   min-height: 0;
   position: relative;
   z-index: 1;
-  /* background-image: url("bgimg.jpg");
+  background-image:
+    linear-gradient(rgba(255, 250, 245, 0.85), rgba(255, 250, 245, 0.9)),
+    url("indian-pattern.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
 }
 
 .hero-top-right-img {
@@ -585,16 +607,17 @@ body {
 .footer {
   text-align: center;
   padding: 3rem 1.5rem;
-  background: white;
+  background-image: url("indian-pattern.jpg");
   border-top: 1px solid rgba(139, 154, 139, 0.15);
   width: 100%;
   box-sizing: border-box;
+  color: white;
 }
 
 .footer p {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--color-soft-brown);
+  color: white;
 }
 
 .footer-note {
@@ -669,6 +692,7 @@ body {
 
   .footer {
     padding: 2rem 1rem;
+    background-image: url("indian-pattern.jpg");
   }
 }
 
