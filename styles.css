@@ -72,6 +72,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  background-image: url("indian-pattern.jpg");
 }
 
 .nav-links a {
@@ -653,6 +654,10 @@ body {
     padding: 1rem;
     gap: 0.5rem;
     border-bottom: 1px solid rgba(139, 154, 139, 0.15);
+
+    background-image:
+      linear-gradient(rgba(255, 250, 245, 0.336), rgba(255, 250, 245, 0.138)),
+      url("indian-pattern.jpg");
   }
 
   .nav-links.open {
