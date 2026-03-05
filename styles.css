@@ -395,11 +395,12 @@ body {
   text-align: center;
   color: var(--color-charcoal);
   margin-bottom: 2rem;
+  border: solid, 2px, #f5d67a;
 }
 
 /* Schedule */
 .schedule-section {
-  background: white;
+  background: var(--color-cream);
 }
 
 .schedule-content {
@@ -414,6 +415,7 @@ body {
   flex: 1 1 180px;
   min-width: 0;
   max-width: 100%;
+  border: ridge, 2px, #e3cd2b52;
 }
 
 .schedule-item h3 {
