@@ -10,8 +10,8 @@
   --color-gold: #c9a227;
   --color-maroon: #7a1c1c;
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Montserrat", -apple-system, sans-serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-body: "Noto Serif Devanagari", serif;
 }
 
 * {
@@ -49,6 +49,18 @@ body {
   background-image: url("indian-pattern.jpg");
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.garland-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: url("marigold-garland.png") repeat-x;
+  background-size: contain;
+  z-index: 200;
+  pointer-events: none;
 }
 
 .nav-logo {
@@ -287,11 +299,19 @@ body {
   }
 }
 
+/* .hero-name-first,
+.hero-name-second {
+  font-family: var(--font-display);
+  color: #7a1c1c;
+  text-shadow: 0 2px 6px rgba(201,162,39,0.35);
+} */
+
 .hero-name-first {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 500;
-  color: #6b5344;
+  color: #7a1c1c;
+  text-shadow: 0 2px 6px rgba(201, 162, 39, 0.35);
   letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
 }
@@ -310,7 +330,8 @@ body {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 500;
-  color: #6b5344;
+  color: #7a1c1c;
+  text-shadow: 0 2px 6px rgba(201, 162, 39, 0.35);
   letter-spacing: 0.02em;
   margin-bottom: 1.5rem;
 }
@@ -343,22 +364,26 @@ body {
   padding: 0.9rem 2.5rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 500;
+  /* font-weight: 500; */
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: white;
-  background: var(--color-charcoal);
+  /* color: white; */
+  /* background: var(--color-charcoal); */
   text-decoration: none;
   border: none;
   cursor: pointer;
+  background: linear-gradient(45deg, #c9a227, #e6c65c);
+  color: #5c2b0c;
+  border-radius: 30px;
+  font-weight: 600;
   transition:
     background 0.2s,
     transform 0.2s;
 }
 
 .hero-rsvp-btn:hover {
-  background: var(--color-soft-brown);
-  transform: translateY(-1px);
+  background: linear-gradient(45deg, #e6c65c, #c9a227);
+  transform: translateY(-2px);
 }
 
 .hero-tagline {
