@@ -62,6 +62,18 @@ body {
   z-index: 200;
   pointer-events: none;
 }
+/* Adjust garland height and spacing on mobile */
+@media (max-width: 768px) {
+  .garland-top {
+    height: 60px;           /* shorter garland */
+    background-size: cover;  /* fills width nicely */
+  }
+
+  /* Optional: add some spacing below garland */
+  .nav {
+    padding-top: 65px;      /* make space for smaller garland */
+  }
+}
 .ganesh-blessing {
   position: relative; /* needed for z-index */
   z-index: 400;       /* higher than garland's 200 */
