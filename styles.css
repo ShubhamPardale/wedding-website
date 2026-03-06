@@ -68,7 +68,7 @@ body {
   z-index: 400;       /* higher than garland's 200 */
   font-family: "Noto Serif Devanagari", serif;
   font-size: 1.5rem;    /* make it larger */
-  color: yellow;     /* gold */
+  color: red;     /* gold */
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.08em;
