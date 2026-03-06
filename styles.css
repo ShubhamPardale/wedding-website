@@ -214,6 +214,35 @@ body {
 
 }
 
+@media (max-width: 768px){
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* Show links inline and centered on all screen sizes */
+@media (max-width: 768px){
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;      /* inline like desktop */
+    flex-wrap: wrap;          /* wrap only if necessary */
+    justify-content: center;  /* center horizontally */
+    gap: 1rem;                /* space between links */
+    background: none;         /* remove any mobile background */
+    padding: 0;               /* remove extra padding */
+    position: static;         /* so they stay in flow */
+    width: auto;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;       /* slightly smaller if needed */
+    text-transform: uppercase;
+    color: white;
+  }
+}
+
+
 @media (max-width: 768px) {
   .hero-marquee {
     height: 210px;
