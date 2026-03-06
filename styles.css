@@ -49,8 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*padding: 3.5rem 2rem 1rem;*/
-  padding: 2rem 1.5rem 0.5rem;
+  padding: 3.5rem 2rem 1rem;
   background-image: url("indian-pattern.jpg");
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -63,7 +62,7 @@ body {
   color: white;
   text-decoration: none;
   letter-spacing: 0.03em;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   white-space: nowrap;
 }
 
@@ -359,13 +358,6 @@ body {
 }
 
 @media (max-width: 400px) {
-  .nav {
-    padding: 0.75rem 1rem;
-  }
-
-  .nav-logo {
-    font-size: 1.2rem;
-  }
 
   .hero-name-first,
   .hero-name-second {
@@ -378,5 +370,43 @@ body {
 
   .schedule-item {
     flex: 1 1 100%;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem; /* compact mobile padding */
+  }
+
+  .nav-logo {
+    margin-bottom: 0; /* remove bottom margin to avoid overlap */
+  }
+
+  .nav-links {
+    display: none; /* hidden until toggle clicked */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    padding: 0.5rem 1rem; /* proper spacing for mobile links */
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(139, 154, 139, 0.15);
+
+    background-image:
+      linear-gradient(rgba(255, 250, 245, 0.336), rgba(255, 250, 245, 0.138)),
+      url("indian-pattern.jpg");
+    z-index: 300; /* above other elements */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 }
