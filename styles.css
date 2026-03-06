@@ -206,15 +206,11 @@ body {
     transform: translateX(-50%);
   }
 }
-@media (max-width:768px){
-
-  .ganesh-blessing{
-    font-size:0.9rem;
-  }
-
-}
 
 @media (max-width: 768px) {
+  .ganesh-blessing {
+    font-size:0.9rem;
+  }
   .hero-marquee {
     height: 210px;
     margin-bottom: 1.5rem;
