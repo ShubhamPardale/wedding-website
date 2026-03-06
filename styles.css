@@ -65,13 +65,14 @@ body {
 /* Adjust garland height and spacing on mobile */
 @media (max-width: 768px) {
   .garland-top {
-    height: 60px;           /* shorter garland */
-    background-size: cover;  /* fills width nicely */
+    height: 80px;           /* closer to desktop height */
+    background-size: contain; /* maintain proper pattern scale */
+    top: 0;
   }
 
-  /* Optional: add some spacing below garland */
+  /* Give nav-top space below garland */
   .nav {
-    padding-top: 65px;      /* make space for smaller garland */
+    padding-top: 85px;       /* enough space for garland */
   }
 }
 .ganesh-blessing {
