@@ -208,9 +208,18 @@ body {
 }
 
 @media (max-width: 768px) {
-  .ganesh-blessing {
-    font-size:0.9rem;
+ .nav-top {
+    flex-direction: row;          /* inline layout */
+    align-items: center;
+    justify-content: space-around; /* spread evenly */
   }
+
+  .hero-ganpati img,
+  .ganesh-blessing,
+  .nav-logo {
+    margin: 0 4px;  /* minimal spacing */
+  }
+ 
   .hero-marquee {
     height: 210px;
     margin-bottom: 1.5rem;
