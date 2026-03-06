@@ -37,10 +37,11 @@ body {
 /* Navigation - centered two-line layout */
 .nav {
   position: fixed;
-  top: 100px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +58,7 @@ body {
   left: 0;
   width: 100%;
   height: 90px;
-  background: url("marigol.png") repeat-x;
+  background: url("marigold.png") repeat-x;
   background-size: contain;
   z-index: 200;
   pointer-events: none;
@@ -154,7 +155,6 @@ body {
 
 /* Image marquee - in flow, no overlap */
 .hero-marquee {
-  top: 100px;
   flex-shrink: 0;
   width: 100%;
   height: 500px;
