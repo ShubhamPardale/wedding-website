@@ -214,13 +214,6 @@ body {
 
 }
 
-@media (max-width: 768px){
-  .nav-toggle {
-    display: none;
-  }
-}
-
-
 /* Show links inline and centered on all screen sizes */
 @media (max-width: 768px){
   .nav-links {
