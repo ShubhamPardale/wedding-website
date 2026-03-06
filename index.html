@@ -16,6 +16,21 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <script>
+  const sparkleLayer = document.getElementById("sparkle-layer");
+  
+  for (let i = 0; i < 40; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+  
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.animationDuration = 6 + Math.random() * 6 + "s";
+    sparkle.style.animationDelay = Math.random() * 10 + "s";
+    sparkle.style.opacity = Math.random();
+  
+    sparkleLayer.appendChild(sparkle);
+  }
+  </script>
   <body>
     <div class="garland-top"></div>
     <nav class="nav">
