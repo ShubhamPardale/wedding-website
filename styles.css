@@ -267,54 +267,11 @@ body {
   padding: 0 0.5rem;
 }
 
-/* Decorative floral corners - watercolor style */
-.floral-corner {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  opacity: 0.65;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floral-top-right {
-  top: 320px;
-  right: 20px;
-  background: url("bgimg.jpg") no-repeat;
-  background-size: contain;
-}
-
-.floral-bottom-left {
-  bottom: 100px;
-  left: 20px;
-  width: 220px;
-  height: 220px;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><circle cx="45" cy="50" r="14" fill="white" opacity="0.9"/><circle cx="65" cy="45" r="12" fill="%23fdf4e3" opacity="0.85"/><circle cx="80" cy="55" r="10" fill="white" opacity="0.9"/><circle cx="55" cy="70" r="13" fill="white" opacity="0.9"/><circle cx="35" cy="65" r="9" fill="%23e8d4b8" opacity="0.75"/><circle cx="25" cy="55" r="8" fill="white" opacity="0.8"/><path d="M20 85 Q35 75 45 88 Q35 95 20 85" fill="%238b9a8b" opacity="0.6"/><path d="M50 95 Q65 85 75 98 Q65 105 50 95" fill="%238b9a8b" opacity="0.55"/><ellipse cx="35" cy="105" rx="10" ry="5" fill="%237a8a7a" opacity="0.45"/><ellipse cx="65" cy="100" rx="8" ry="4" fill="%237a8a7a" opacity="0.45"/></svg>')
-    no-repeat;
-  background-size: contain;
-}
-
 @media (max-width: 768px) {
   .hero {
     padding-top: 56px;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .floral-corner {
-    width: 100px;
-    height: 100px;
-    opacity: 0.4;
-  }
-  .floral-top-right {
-    top: 270px;
-    right: -10px;
-  }
-  .floral-bottom-left {
-    width: 120px;
-    height: 120px;
-    bottom: 60px;
-    left: -10px;
   }
 }
 
