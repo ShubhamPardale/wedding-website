@@ -249,45 +249,6 @@ body {
   padding: 0 0.5rem;
 }
 
-.petal {
-  position: fixed;
-  top: -20px;
-  width: 12px;
-  height: 12px;
-  background: #f5c6c6;
-  border-radius: 50%;
-  animation: petalFall 10s linear infinite;
-}
-
-@keyframes petalFall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-.sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: radial-gradient(circle, #fff8c6, #c9a227);
-  border-radius: 50%;
-  opacity: 0;
-  animation: sparkleFloat 6s infinite;
-}
-
-@keyframes sparkleFloat {
-  0% {
-    transform: translateY(0) scale(0.4);
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-250px) scale(1);
-    opacity: 0;
-  }
-}
 /* Decorative floral corners - watercolor style */
 .floral-corner {
   position: absolute;
@@ -789,5 +750,45 @@ body {
 
   .schedule-item {
     flex: 1 1 100%;
+  }
+}
+
+.petal {
+  position: fixed;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  background: #f5c6c6;
+  border-radius: 50%;
+  animation: petalFall 10s linear infinite;
+}
+
+@keyframes petalFall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff8c6, #c9a227);
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkleFloat 6s infinite;
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: translateY(0) scale(0.4);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-250px) scale(1);
+    opacity: 0;
   }
 }
