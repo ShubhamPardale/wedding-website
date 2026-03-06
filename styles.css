@@ -307,6 +307,26 @@ body {
   text-shadow: 0 2px 6px rgba(201,162,39,0.35);
 } */
 
+.hero-ganpati {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-ganpati img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(73%)
+    sepia(32%)
+    saturate(600%)
+    hue-rotate(8deg);
+}
+.ganesh-text {
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 1.1rem;
+  color: var(--color-maroon);
+}
+
 .hero-name-first {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
