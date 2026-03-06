@@ -333,58 +333,57 @@ body {
   opacity: 0.95;
 }
 
-/* Petals animation */
-/* Realistic Petals */
+/* Realistic Flower Petals */
 .petal {
   position: fixed;
   top: -20px;
-  width: 8px;             /* varied smaller size for realism */
-  height: 12px;
-  background: radial-gradient(circle at 50% 50%, #f5c6c6 0%, #f9dada 100%);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* petal shape */
+  width: 12px;
+  height: 20px;
+  background: radial-gradient(ellipse at 50% 40%, #f5c6c6 0%, #f9dada 80%);
+  clip-path: ellipse(50% 70% at 50% 50%); /* makes an oval petal shape */
+  border-radius: 50% 50% 50% 50%;
   pointer-events: none;
-  animation: petalFall 8s linear infinite;
-  opacity: 0.7;            /* softer look */
+  opacity: 0.8;
   z-index: 5000;
-  transform: rotate(0deg);
+  animation: petalFall 8s linear infinite;
+  transform: rotate(var(--rot, 0deg)); /* rotate each petal randomly */
 }
 
-/* Multiple petals variation */
+/* Vary size and duration for realism */
 .petal:nth-child(2n) {
   width: 10px;
-  height: 14px;
-  animation-duration: 10s;
-  opacity: 0.6;
+  height: 18px;
+  animation-duration: 9s;
+  --rot: 15deg;
 }
 
 .petal:nth-child(3n) {
-  width: 6px;
-  height: 10px;
+  width: 14px;
+  height: 22px;
   animation-duration: 7s;
-  opacity: 0.8;
+  --rot: -10deg;
 }
 
 /* Petal falling animation with sway */
 @keyframes petalFall {
   0% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-    opacity: 0.7;
+    transform: translateY(0) translateX(0) rotate(var(--rot,0deg));
+    opacity: 0.8;
   }
   25% {
-    transform: translateY(25vh) translateX(-10px) rotate(45deg);
+    transform: translateY(25vh) translateX(-10px) rotate(calc(var(--rot,0deg) + 45deg));
   }
   50% {
-    transform: translateY(50vh) translateX(10px) rotate(90deg);
+    transform: translateY(50vh) translateX(10px) rotate(calc(var(--rot,0deg) + 90deg));
   }
   75% {
-    transform: translateY(75vh) translateX(-15px) rotate(135deg);
+    transform: translateY(75vh) translateX(-15px) rotate(calc(var(--rot,0deg) + 135deg));
   }
   100% {
-    transform: translateY(110vh) translateX(0) rotate(180deg);
+    transform: translateY(110vh) translateX(0) rotate(calc(var(--rot,0deg) + 180deg));
     opacity: 0;
   }
 }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav {
