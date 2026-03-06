@@ -67,7 +67,7 @@ body {
   position: relative; /* needed for z-index */
   z-index: 400;       /* higher than garland's 200 */
   font-family: "Noto Serif Devanagari", serif;
-  font-size: 2.5rem;    /* make it larger */
+  font-size: 1.5rem;    /* make it larger */
   color: yellow;     /* gold */
   text-align: center;
   font-weight: 600;
@@ -336,13 +336,7 @@ body {
   height: auto;
   margin-bottom: 0.3rem;
   opacity: 0.95;
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(73%)
-    sepia(32%)
-    saturate(600%)
-    hue-rotate(8deg);
+  filter: invert(18%) sepia(96%) saturate(6000%) hue-rotate(-10deg) brightness(95%) contrast(90%);
 }
 
 .hero-name-first {
