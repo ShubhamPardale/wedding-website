@@ -63,16 +63,15 @@ body {
   pointer-events: none;
 }
 /* Adjust garland height and spacing on mobile */
-@media (max-width: 768px) {
+
+(max-width: 400px) {
   .garland-top {
-    height: 80px;           /* closer to desktop height */
-    background-size: contain; /* maintain proper pattern scale */
-    top: 0;
+    height: 70px;           /* slightly smaller, but not too small */
+    background-size: contain;
   }
 
-  /* Give nav-top space below garland */
   .nav {
-    padding-top: 85px;       /* enough space for garland */
+    padding-top: 75px;
   }
 }
 .ganesh-blessing {
