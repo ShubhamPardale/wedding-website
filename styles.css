@@ -138,7 +138,7 @@ body {
 .nav-toggle span {
   width: 24px;
   height: 2px;
-  background: var(--color-charcoal);
+  background: white;
 }
 
 /*.hero::before {
