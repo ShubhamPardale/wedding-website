@@ -775,3 +775,20 @@ body {
     flex: 1 1 100%;
   }
 }
+.petal {
+  position: fixed;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle at 30% 30%, #ffd6d6, #f5a3a3);
+  border-radius: 50% 60% 40% 60%;
+  animation: petalFall 10s linear infinite;
+  pointer-events: none;
+  z-index: 998;
+}
+
+@keyframes petalFall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
