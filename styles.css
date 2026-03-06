@@ -207,19 +207,25 @@ body {
   }
 }
 
-@media (max-width: 768px) {
- .nav-top {
-    flex-direction: row;          /* inline layout */
-    align-items: center;
-    justify-content: space-around; /* spread evenly */
+@media (max-width: 768px){
+  .hero-ganpati img {
+    width: 25px;  /* smaller Ganpati icon */
+    margin-bottom: 2px;
   }
 
-  .hero-ganpati img,
-  .ganesh-blessing,
-  .nav-logo {
-    margin: 0 4px;  /* minimal spacing */
+  .ganesh-blessing {
+    font-size: 1.2rem;   /* smaller text */
+    margin-bottom: 2px;
   }
- 
+
+  .nav-logo {
+    font-size: 1.4rem;   /* smaller logo */
+    margin-bottom: 4px;
+  }
+
+  .nav {
+    padding-top: 60px;   /* reduce top padding to give more space for marquee */
+  }
   .hero-marquee {
     height: 210px;
     margin-bottom: 1.5rem;
