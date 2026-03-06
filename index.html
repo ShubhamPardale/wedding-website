@@ -16,6 +16,18 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const petal = document.createElement("div");
+      petal.className = "petal";
+    
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = (8 + Math.random() * 6) + "s";
+      petal.style.animationDelay = Math.random() * 5 + "s";
+    
+      document.body.appendChild(petal);
+    }
+  </script>
   <body>
     <div class="garland-top"></div>
     <nav class="nav">
