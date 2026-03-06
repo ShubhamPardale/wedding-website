@@ -334,21 +334,55 @@ body {
 }
 
 /* Petals animation */
+/* Realistic Petals */
 .petal {
   position: fixed;
   top: -20px;
-  width: 12px;
+  width: 8px;             /* varied smaller size for realism */
   height: 12px;
-  background: #f5c6c6;
-  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #f5c6c6 0%, #f9dada 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* petal shape */
   pointer-events: none;
-  animation: petalFall linear infinite;
+  animation: petalFall 8s linear infinite;
+  opacity: 0.7;            /* softer look */
   z-index: 5000;
+  transform: rotate(0deg);
 }
 
+/* Multiple petals variation */
+.petal:nth-child(2n) {
+  width: 10px;
+  height: 14px;
+  animation-duration: 10s;
+  opacity: 0.6;
+}
+
+.petal:nth-child(3n) {
+  width: 6px;
+  height: 10px;
+  animation-duration: 7s;
+  opacity: 0.8;
+}
+
+/* Petal falling animation with sway */
 @keyframes petalFall {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(110vh) rotate(360deg); }
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(25vh) translateX(-10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(10px) rotate(90deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(-15px) rotate(135deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(0) rotate(180deg);
+    opacity: 0;
+  }
 }
 
 /* ---------- Responsive ---------- */
