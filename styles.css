@@ -232,7 +232,7 @@ body {
 /* Hero names */
 .hero-name-first {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 500;
   color: #7a1c1c;
   text-shadow: 0 2px 6px rgba(201, 162, 39, 0.35);
@@ -242,7 +242,7 @@ body {
 
 .hero-and {
   font-family: var(--font-body);
-  font-size: clamp(1.5rem, 8vw, 5rem);
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: lowercase;
@@ -257,7 +257,7 @@ body {
   color: #7a1c1c;
   text-shadow: 0 2px 6px rgba(201, 162, 39, 0.35);
   letter-spacing: 0.02em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Hero tagline / date */
@@ -319,7 +319,7 @@ body {
 .hero-elephant-left {
   position: absolute;
   bottom: 40px;
-  left: 30px;
+  left: 40px;
   width: 180px;
   opacity: 0.95;
 }
@@ -327,63 +327,30 @@ body {
 .hero-elephant-right {
   position: absolute;
   bottom: 40px;
-  right: 30px;
+  right: 40px;
   width: 180px;
   transform: scaleX(-1);
   opacity: 0.95;
 }
 
-/* Realistic Flower Petals */
+/* Petals animation */
 .petal {
   position: fixed;
   top: -20px;
   width: 12px;
-  height: 20px;
-  background: radial-gradient(ellipse at 50% 40%, #f5c6c6 0%, #f9dada 80%);
-  clip-path: ellipse(50% 70% at 50% 50%); /* makes an oval petal shape */
-  border-radius: 50% 50% 50% 50%;
+  height: 12px;
+  background: #f5c6c6;
+  border-radius: 50%;
   pointer-events: none;
-  opacity: 0.7;
+  animation: petalFall linear infinite;
   z-index: 5000;
-  animation: petalFall 8s linear infinite;
-  transform: rotate(var(--rot, 0deg)); /* rotate each petal randomly */
 }
 
-/* Vary size and duration for realism */
-.petal:nth-child(2n) {
-  width: 10px;
-  height: 18px;
-  animation-duration: 9s;
-  --rot: 15deg;
-}
-
-.petal:nth-child(3n) {
-  width: 14px;
-  height: 22px;
-  animation-duration: 7s;
-  --rot: -10deg;
-}
-
-/* Petal falling animation with sway */
 @keyframes petalFall {
-  0% {
-    transform: translateY(0) translateX(0) rotate(var(--rot,0deg));
-    opacity: 0.8;
-  }
-  25% {
-    transform: translateY(25vh) translateX(-10px) rotate(calc(var(--rot,0deg) + 45deg));
-  }
-  50% {
-    transform: translateY(50vh) translateX(10px) rotate(calc(var(--rot,0deg) + 90deg));
-  }
-  75% {
-    transform: translateY(75vh) translateX(-15px) rotate(calc(var(--rot,0deg) + 135deg));
-  }
-  100% {
-    transform: translateY(110vh) translateX(0) rotate(calc(var(--rot,0deg) + 180deg));
-    opacity: 0;
-  }
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
 }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav {
