@@ -332,7 +332,7 @@ body {
 }
 
 .hero-ganpati img {
-  width: 50px;  /* smaller than before */
+  width: 100px; 
   height: auto;
   margin-bottom: 0.3rem;
   opacity: 0.95;
@@ -341,7 +341,7 @@ body {
 
 .hero-name-first {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 500;
   color: #7a1c1c;
   text-shadow: 0 2px 6px rgba(201, 162, 39, 0.35);
@@ -797,7 +797,7 @@ body {
 
   .hero-name-first,
   .hero-name-second {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .schedule-content {
