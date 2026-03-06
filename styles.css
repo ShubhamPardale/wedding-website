@@ -57,7 +57,7 @@ body {
   left: 0;
   width: 100%;
   height: 90px;
-  background: url("marigo.png") repeat-x;
+  background: url("marigol.png") repeat-x;
   background-size: contain;
   z-index: 200;
   pointer-events: none;
