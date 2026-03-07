@@ -316,6 +316,16 @@ body {
   letter-spacing: 0.02em;
   margin-bottom: 1.5rem;
 }
+.hero-name-first,
+.hero-name-second {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+.hero-and {
+  font-family: 'Allura', cursive;
+  font-size: 1.5rem;
+}
 
 .hero-hashtag {
   font-family: var(--font-body);
@@ -706,11 +716,9 @@ body {
 
   .hero-name-first,
   .hero-name-second {
-    font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
   }
   .hero-and {
-    font-family: 'Allura', cursive;
     font-size: 1.4rem; /* scales better with hero-name-first/second */
   }
 }
