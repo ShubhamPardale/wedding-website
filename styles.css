@@ -299,7 +299,7 @@ body {
 
 .hero-and {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: lowercase;
@@ -706,7 +706,12 @@ body {
 
   .hero-name-first,
   .hero-name-second {
+    font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
+  }
+  .hero-and {
+    font-family: 'Allura', cursive;
+    font-size: 1.4rem; /* scales better with hero-name-first/second */
   }
 }
 
