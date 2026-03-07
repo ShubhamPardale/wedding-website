@@ -318,13 +318,12 @@ body {
 }
 .hero-name-first,
 .hero-name-second {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
+  font-family: 'Alex Brush', cursive;
 }
 
 .hero-and {
-  font-family: 'Allura', cursive;
-  font-size: 1.5rem;
+  font-family: 'Sacramento', serif;
+  font-size: 1.4rem;
 }
 
 .hero-hashtag {
