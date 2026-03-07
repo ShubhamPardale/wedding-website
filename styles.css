@@ -420,7 +420,7 @@ body {
 .section {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  margin: 5rem auto 0;
   padding-top: 170px;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
@@ -719,6 +719,7 @@ body {
   }
 
   .section {
+    margin-top: 3rem;
     padding-top: 170px;
     padding: 2rem 1rem;
   }
