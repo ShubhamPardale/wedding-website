@@ -21,33 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.addEventListener("DOMContentLoaded", function() {
-  const sparkleContainer = document.querySelector('.sparkle-container');
-  const isMobile = window.innerWidth <= 768; // detect mobile
-  const sparkleCount = isMobile ? 80 : 150;  // fewer on mobile
+  const container = document.querySelector(".sparkle-container");
+  const isMobile = window.innerWidth <= 768;
+  const count = isMobile ? 50 : 150; // fewer sparkles on mobile
 
-  for (let i = 0; i < sparkleCount; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.classList.add('sparkle');
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement("div");
+    s.classList.add("sparkle");
 
-    // random position
-    sparkle.style.left = Math.random() * 100 + '%';
-    sparkle.style.top = Math.random() * 100 + '%';
+    // Random initial position
+    s.style.left = Math.random() * 100 + "%";
+    s.style.top = Math.random() * 100 + "%";
 
-    // random size
-    const size = isMobile ? Math.random() * 3 + 1 : Math.random() * 4 + 2;
-    sparkle.style.width = `${size}px`;
-    sparkle.style.height = `${size}px`;
+    // Random animation duration and delay
+    s.style.animationDuration = 2 + Math.random() * 3 + "s";
+    s.style.animationDelay = Math.random() * 5 + "s";
 
-    // random animation duration and delay
-    const duration = Math.random() * 3 + 2; // 2s to 5s
-    const delay = Math.random() * 5;       // 0s to 5s
-    sparkle.style.animationDuration = `${duration}s`;
-    sparkle.style.animationDelay = `${delay}s`;
-
-    sparkleContainer.appendChild(sparkle);
+    container.appendChild(s);
     }
   });
-  
   if (form && formContainer && successMessage && submitButton) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
