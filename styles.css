@@ -703,6 +703,14 @@ body {
   .nav-toggle {
     display: flex;
   }
+
+  .hero-name-first {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-name-second {
+    font-size: 2rem !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -769,14 +777,6 @@ body {
 
   .nav-logo {
     font-size: 1.2rem;
-  }
-
-   .hero-name-first {
-    font-size: 1.6rem;
-  }
-
-  .hero-name-second {
-    font-size: 1.9rem;
   }
 
   .schedule-content {
