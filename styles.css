@@ -831,20 +831,23 @@ body {
 
 .sparkle-container {
   position: fixed;
-  inset: 0;           /* covers entire viewport */
-  pointer-events: none; /* clicks pass through */
-  z-index: 5000;       /* above everything else */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 6000; /* above everything including petals */
   overflow: visible;
 }
 
 .sparkle {
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   background: white;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 6px 2px #fffacd; /* soft glow */
+  box-shadow: 0 0 6px 2px #fffacd;
   animation: sparkleTwinkle linear infinite;
 }
 
