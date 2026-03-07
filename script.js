@@ -19,102 +19,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const successMessage = document.getElementById('rsvp-success');
   const submitButton = form?.querySelector('.rsvp-button');
 
-  const canvas = document.getElementById('effectsCanvas');
-const ctx = canvas.getContext('2d');
-
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
-
-// Petals
-const petals = [];
-const petalCount = 25; // fewer petals for elegance
-for (let i = 0; i < petalCount; i++) {
-  petals.push({
-    x: Math.random() * width,
-    y: Math.random() * height,
-    size: 12 + Math.random() * 12,
-    speedY: 1 + Math.random() * 2,
-    speedX: -0.5 + Math.random() * 1,
-    rotation: Math.random() * 360,
-    rotationSpeed: (Math.random() - 0.5) * 2
-  });
-}
-
-  // Sparkles
+  const canvas = document.getElementById("sparkleCanvas");
+  const ctx = canvas.getContext("2d");
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+  
+  // Generate sparkles
   const sparkles = [];
-  const sparkleCount = 150; // more sparkles
+  const sparkleCount = window.innerWidth <= 768 ? 50 : 150; // fewer for mobile
+  
   for (let i = 0; i < sparkleCount; i++) {
     sparkles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: 2 + Math.random() * 3,
-      alpha: 0.6 + Math.random() * 0.4,
-      dx: (Math.random() - 0.5) * 0.3,
-      dy: (Math.random() - 0.5) * 0.3
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 1,
+      speed: Math.random() * 0.5 + 0.2,
+      opacity: Math.random(),
+      opacityChange: Math.random() * 0.02 + 0.01
     });
   }
   
-  // Petal color palette (soft wedding colors)
-  const petalColors = ['#f9c6c9', '#f5d6a1', '#fff5f0'];
-  
-  // Draw loop
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-  
-    // Draw petals
-    for (let p of petals) {
-      ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate((p.rotation * Math.PI) / 180);
-      ctx.fillStyle = petalColors[Math.floor(Math.random() * petalColors.length)];
-      ctx.beginPath();
-      ctx.ellipse(0, 0, p.size * 0.5, p.size, 0, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-  
-      // Move petals
-      p.x += p.speedX;
-      p.y += p.speedY;
-      p.rotation += p.rotationSpeed;
-  
-      // Wrap around edges
-      if (p.y > height + 20) p.y = -20;
-      if (p.x > width + 20) p.x = -20;
-      if (p.x < -20) p.x = width + 20;
-    }
-  
-    // Draw sparkles
-    for (let s of sparkles) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${s.alpha})`;
-      ctx.fill();
-  
-      // Flicker effect
-      s.alpha = 0.5 + Math.random() * 0.5;
-  
-      // Move sparkles
-      s.x += s.dx;
-      s.y += s.dy;
-  
-      // Wrap edges
-      if (s.x < 0) s.x = width;
-      if (s.x > width) s.x = 0;
-      if (s.y < 0) s.y = height;
-      if (s.y > height) s.y = 0;
-    }
-  
-    requestAnimationFrame(draw);
-  }
-  
-  draw();
-  
-  // Resize handling
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-   
   function animateSparkles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     sparkles.forEach(s => {
@@ -127,6 +56,8 @@ for (let i = 0; i < petalCount; i++) {
     });
     requestAnimationFrame(animateSparkles);
   }
+  
+  animateSparkles();
   
   if (form && formContainer && successMessage && submitButton) {
     form.addEventListener('submit', async (e) => {
