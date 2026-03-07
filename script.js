@@ -22,18 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener("DOMContentLoaded", function() {
   const sparkleContainer = document.querySelector('.sparkle-container');
-  const sparkleCount = 150; // more sparkles
+  const isMobile = window.innerWidth <= 768; // detect mobile
+  const sparkleCount = isMobile ? 80 : 150;  // fewer on mobile
 
   for (let i = 0; i < sparkleCount; i++) {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
 
     // random position
-    sparkle.style.left = Math.random() * 100 + 'vw';
-    sparkle.style.top = Math.random() * 100 + 'vh';
+    sparkle.style.left = Math.random() * 100 + '%';
+    sparkle.style.top = Math.random() * 100 + '%';
 
     // random size
-    const size = Math.random() * 4 + 2; // 2px to 6px
+    const size = isMobile ? Math.random() * 3 + 1 : Math.random() * 4 + 2;
     sparkle.style.width = `${size}px`;
     sparkle.style.height = `${size}px`;
 
