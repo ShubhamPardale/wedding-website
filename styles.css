@@ -274,13 +274,6 @@ body {
   }
 }
 
-/* .hero-name-first,
-.hero-name-second {
-  font-family: var(--font-display);
-  color: #7a1c1c;
-  text-shadow: 0 2px 6px rgba(201,162,39,0.35);
-} */
-
 .hero-ganpati {
   text-align: center;
   margin-bottom: 0.1rem; /* previously 0.25rem, makes it closer to blessing */
@@ -778,9 +771,12 @@ body {
     font-size: 1.2rem;
   }
 
-  .hero-name-first,
+   .hero-name-first {
+    font-size: 1.6rem;
+  }
+
   .hero-name-second {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   .schedule-content {
