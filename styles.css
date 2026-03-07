@@ -829,6 +829,15 @@ body {
   .petal { width: 8px; height: 12px; animation-duration: 5s; }
 }
 
+#sparkleCanvas {
+  position: fixed;    /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* doesn’t block clicks */
+  z-index: 9999;       /* above everything else */
+}
 .sparkle-container {
   position: fixed;
   top: 0;
