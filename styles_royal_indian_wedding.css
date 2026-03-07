@@ -800,3 +800,521 @@ body::before {
     flex: 1 1 100%;
   }
 }
+/* =========================================================
+LANDING PAGE REDESIGN
+Inspired by royal Indian wedding invitation reference
+Paste at the VERY BOTTOM of styles.css
+========================================================= */
+
+/* ---------- PAGE BACKGROUND ---------- */
+
+body {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 245, 238, 0.96) 0%, rgba(249, 230, 225, 0.88) 34%, rgba(232, 198, 198, 0.72) 58%, rgba(131, 62, 63, 0.22) 100%),
+    linear-gradient(180deg, #fff9f4 0%, #f6e4de 38%, #ebd2d0 68%, #d7b1b1 100%);
+  color: #4f342d;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.12;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 9px
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* ---------- TOP NAV + TORAN ---------- */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.5rem 1rem 0.45rem;
+  background:
+    linear-gradient(180deg, rgba(123, 66, 67, 0.82), rgba(143, 88, 87, 0.58)),
+    radial-gradient(circle at top, rgba(216, 174, 111, 0.18), transparent 40%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.18);
+}
+
+.garland-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  background: url("toran 1.png") repeat-x top center;
+  background-size: auto 42px;
+  z-index: 1200;
+  pointer-events: none;
+}
+
+.nav-logo {
+  color: #fff7f1;
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(1.8rem, 4.4vw, 2.5rem);
+  margin-top: 0.15rem;
+  text-shadow: 0 2px 8px rgba(63, 23, 24, 0.35);
+}
+
+.nav-links a {
+  color: #fff7f1;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a.nav-current {
+  color: #f0d38a;
+}
+
+/* ---------- MOBILE MENU BUTTON ---------- */
+
+.nav-toggle,
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(122, 28, 28, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 248, 243, 0.96);
+  box-shadow: 0 8px 20px rgba(79, 43, 36, 0.14);
+  z-index: 1300;
+}
+
+.nav-toggle span,
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin: 2px 0;
+  border-radius: 999px;
+  background: #7a1c1c;
+}
+
+/* ---------- HERO WRAPPER ---------- */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: 88px;
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+  padding-bottom: 1.5rem;
+  overflow-x: hidden;
+}
+
+.hero-main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 248, 242, 0.98) 0%, rgba(253, 243, 238, 0.95) 28%, rgba(245, 225, 220, 0.88) 62%, rgba(144, 71, 71, 0.16) 100%);
+  box-shadow:
+    0 14px 34px rgba(90, 52, 45, 0.12),
+    inset 0 0 0 1px rgba(255, 249, 243, 0.4);
+}
+
+.hero-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(227, 191, 116, 0.18), transparent 22%),
+    linear-gradient(180deg, rgba(124, 60, 61, 0.12) 0%, rgba(255,255,255,0) 18%, rgba(255,255,255,0) 82%, rgba(124, 60, 61, 0.12) 100%),
+    linear-gradient(90deg, rgba(124, 60, 61, 0.15) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, rgba(124, 60, 61, 0.15) 100%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 246, 0.88), rgba(255, 245, 240, 0.83));
+  border: none;
+  border-radius: 24px;
+  box-shadow: none;
+  padding-top: 1rem;
+  padding-bottom: 1.8rem;
+  margin: 0 auto;
+}
+
+/* remove old double-border clutter */
+.hero-content::before,
+.hero-content::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+/* thin inner frame */
+.hero-content::before {
+  inset: 14px;
+  border: 1.5px solid rgba(194, 155, 84, 0.38);
+  border-radius: 22px;
+  background: none;
+}
+
+/* ornamental corner treatment */
+.hero-content::after {
+  inset: 0;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 28px 28px, rgba(194,155,84,0.26) 0 2px, transparent 2px),
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) top 18px left 18px / 28px 1.5px no-repeat,
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) top 18px left 18px / 1.5px 28px no-repeat,
+
+    radial-gradient(circle at calc(100% - 28px) 28px, rgba(194,155,84,0.26) 0 2px, transparent 2px),
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) top 18px right 18px / 28px 1.5px no-repeat,
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) top 18px right 18px / 1.5px 28px no-repeat,
+
+    radial-gradient(circle at 28px calc(100% - 28px), rgba(194,155,84,0.26) 0 2px, transparent 2px),
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) bottom 18px left 18px / 28px 1.5px no-repeat,
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) bottom 18px left 18px / 1.5px 28px no-repeat,
+
+    radial-gradient(circle at calc(100% - 28px) calc(100% - 28px), rgba(194,155,84,0.26) 0 2px, transparent 2px),
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) bottom 18px right 18px / 28px 1.5px no-repeat,
+    linear-gradient(rgba(194,155,84,0.42), rgba(194,155,84,0.42)) bottom 18px right 18px / 1.5px 28px no-repeat;
+}
+
+/* ---------- TEXT HIERARCHY ---------- */
+
+.hero-ganpati img {
+  width: 74px;
+  margin-bottom: 0.15rem;
+  filter: invert(16%) sepia(85%) saturate(3500%) hue-rotate(-10deg) brightness(88%) contrast(95%);
+}
+
+.hero-blessing,
+.ganesh-blessing {
+  color: #8f1f20 !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.hero-name-first,
+.hero-name-second {
+  font-family: "Dancing Script", cursive;
+  color: #7b2f26;
+  text-shadow: 0 2px 7px rgba(190, 148, 76, 0.18);
+  line-height: 1.05;
+}
+
+.hero-name-first {
+  font-size: clamp(2.1rem, 8vw, 4.5rem);
+  margin-bottom: 0.4rem;
+}
+
+.hero-and {
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  color: #8f6a63;
+  letter-spacing: 0.14em;
+  margin: 0.45rem 0;
+}
+
+.hero-name-second {
+  font-size: clamp(2.1rem, 8vw, 4.5rem);
+  margin-bottom: 1.15rem;
+}
+
+.hero-hashtag {
+  color: #7a5549;
+  font-size: 0.95rem;
+  margin-bottom: 0.95rem;
+}
+
+.hero-date {
+  font-family: "Cinzel", serif;
+  color: #5b4339;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+}
+
+.hero-location {
+  color: #7a6258;
+  font-size: 1rem;
+  max-width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- RSVP + ELEPHANTS ---------- */
+
+.hero-rsvp-wrap,
+.rsvp-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 0.35rem;
+}
+
+.hero-rsvp-btn,
+.rsvp-button {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 152px;
+  padding: 0.85rem 1.8rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5b3717;
+  text-decoration: none;
+  border: 1px solid rgba(160, 118, 41, 0.5);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 32%, #f5dfa3 0%, #dfbd62 52%, #b88922 100%);
+  box-shadow:
+    0 8px 18px rgba(164, 116, 34, 0.22),
+    inset 0 2px 8px rgba(255, 255, 255, 0.42);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.hero-rsvp-btn:hover,
+.rsvp-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  box-shadow:
+    0 10px 20px rgba(164, 116, 34, 0.25),
+    inset 0 2px 8px rgba(255, 255, 255, 0.42);
+}
+
+.hero-elephant-left,
+.hero-elephant-right,
+.rsvp-elephant-left,
+.rsvp-elephant-right,
+.rsvp-elephant {
+  width: 58px;
+  opacity: 0.72;
+  filter: saturate(0.82) brightness(1.02);
+  bottom: 12px;
+}
+
+.hero-elephant-left,
+.rsvp-elephant-left {
+  position: absolute;
+  left: calc(50% - 112px);
+}
+
+.hero-elephant-right,
+.rsvp-elephant-right {
+  position: absolute;
+  right: calc(50% - 112px);
+  transform: scaleX(-1);
+}
+
+/* if site uses one generic elephant class */
+.rsvp-elephant {
+  position: relative;
+  margin: 0 -8px;
+}
+
+/* ---------- REMOVE AWKWARD SPACE ON OTHER SECTIONS ---------- */
+
+.section {
+  scroll-margin-top: 86px;
+}
+
+.page-content {
+  padding-top: 0;
+}
+
+/* ---------- MOBILE DROPDOWN OVERLAY ---------- */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.45rem 0.85rem 0.35rem;
+  }
+
+  .garland-top {
+    height: 36px;
+    background-size: auto 36px;
+  }
+
+  .nav-toggle,
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-logo {
+    font-size: 1.85rem;
+    margin-top: 0.05rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    right: 0.85rem;
+    left: auto;
+    width: min(240px, calc(100vw - 1.7rem));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0.85rem;
+    margin-top: 0;
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 248, 243, 0.98), rgba(255, 244, 239, 0.98));
+    border: 1px solid rgba(201, 162, 39, 0.22);
+    box-shadow: 0 16px 28px rgba(64, 35, 28, 0.18);
+    z-index: 1250;
+  }
+
+  .nav-links.open,
+  .nav-links.active,
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #6f2724;
+    text-shadow: none;
+    font-size: 0.9rem;
+    padding: 0.55rem 0.2rem;
+  }
+
+  .hero {
+    padding-top: 74px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0.9rem;
+  }
+
+  .hero-main {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .hero-content {
+    border-radius: 0 0 22px 22px;
+    padding-top: 0.85rem;
+    padding-bottom: 1.35rem;
+  }
+
+  .hero-content::before {
+    inset: 12px 10px 14px;
+    border-radius: 18px;
+  }
+
+  .hero-content::after {
+    border-radius: 0 0 22px 22px;
+  }
+
+  .hero-ganpati img {
+    width: 58px;
+  }
+
+  .hero-name-first,
+  .hero-name-second {
+    font-size: 3.1rem;
+  }
+
+  .hero-and {
+    font-size: 2.2rem;
+    margin: 0.2rem 0 0.45rem;
+  }
+
+  .hero-location {
+    max-width: 90%;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .hero-rsvp-btn,
+  .rsvp-button {
+    min-width: 132px;
+    padding: 0.78rem 1.45rem;
+    font-size: 0.86rem;
+  }
+
+  .hero-elephant-left,
+  .hero-elephant-right,
+  .rsvp-elephant-left,
+  .rsvp-elephant-right,
+  .rsvp-elephant {
+    width: 48px;
+    bottom: 8px;
+    opacity: 0.66;
+  }
+
+  .hero-elephant-left,
+  .rsvp-elephant-left {
+    left: calc(50% - 94px);
+  }
+
+  .hero-elephant-right,
+  .rsvp-elephant-right {
+    right: calc(50% - 94px);
+  }
+
+  .section {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    scroll-margin-top: 74px;
+  }
+}
+
+/* ---------- EXTRA SMALL MOBILE ---------- */
+
+@media (max-width: 430px) {
+  .hero-name-first,
+  .hero-name-second {
+    font-size: 2.75rem;
+  }
+
+  .hero-and {
+    font-size: 1.95rem;
+  }
+
+  .hero-rsvp-btn,
+  .rsvp-button {
+    min-width: 124px;
+    padding: 0.72rem 1.2rem;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-elephant-left,
+  .hero-elephant-right,
+  .rsvp-elephant-left,
+  .rsvp-elephant-right,
+  .rsvp-elephant {
+    width: 42px;
+  }
+
+  .hero-elephant-left,
+  .rsvp-elephant-left {
+    left: calc(50% - 82px);
+  }
+
+  .hero-elephant-right,
+  .rsvp-elephant-right {
+    right: calc(50% - 82px);
+  }
+}
