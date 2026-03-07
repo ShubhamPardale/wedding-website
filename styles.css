@@ -829,6 +829,31 @@ body {
   .petal { width: 8px; height: 12px; animation-duration: 5s; }
 }
 
+.sparkle-container {
+  position: fixed;
+  inset: 0;           /* covers entire viewport */
+  pointer-events: none; /* clicks pass through */
+  z-index: 5000;       /* above everything else */
+  overflow: visible;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 6px 2px #fffacd; /* soft glow */
+  animation: sparkleTwinkle linear infinite;
+}
+
+@keyframes sparkleTwinkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
 /* Extra small screens */
 @media (max-width: 400px) {
   .nav {
