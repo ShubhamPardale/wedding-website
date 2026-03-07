@@ -19,30 +19,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const successMessage = document.getElementById('rsvp-success');
   const submitButton = form?.querySelector('.rsvp-button');
 
+
+  document.addEventListener("DOMContentLoaded", function() {
   const sparkleContainer = document.querySelector('.sparkle-container');
-  const sparkleCount = 100; // number of sparkles
-  
+  const sparkleCount = 150; // more sparkles
+
   for (let i = 0; i < sparkleCount; i++) {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
-  
+
     // random position
     sparkle.style.left = Math.random() * 100 + 'vw';
     sparkle.style.top = Math.random() * 100 + 'vh';
-  
+
     // random size
-    const size = Math.random() * 3 + 2; // 2px to 5px
+    const size = Math.random() * 4 + 2; // 2px to 6px
     sparkle.style.width = `${size}px`;
     sparkle.style.height = `${size}px`;
-  
+
     // random animation duration and delay
     const duration = Math.random() * 3 + 2; // 2s to 5s
     const delay = Math.random() * 5;       // 0s to 5s
     sparkle.style.animationDuration = `${duration}s`;
     sparkle.style.animationDelay = `${delay}s`;
-  
+
     sparkleContainer.appendChild(sparkle);
-  }
+    }
+  });
   
   if (form && formContainer && successMessage && submitButton) {
     form.addEventListener('submit', async (e) => {
