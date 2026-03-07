@@ -422,6 +422,7 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 170px;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
 }
@@ -438,6 +439,7 @@ body {
 
 /* Schedule */
 .schedule-section {
+  padding-top: 170px;
   background: var(--color-cream);
 }
 
@@ -479,6 +481,7 @@ body {
 
 /* Gallery */
 .gallery-section {
+  padding-top: 170px;
   background: var(--color-cream);
 }
 
@@ -526,6 +529,7 @@ body {
 
 /* RSVP Section */
 .rsvp-section {
+  padding-top: 170px;
   background: var(--color-cream);
 }
 
@@ -711,10 +715,12 @@ body {
 
 @media (max-width: 600px) {
   .hero {
+    padding-top: 170px;
     padding: 4.5rem 1rem 3.5rem;
   }
 
   .section {
+    padding-top: 170px;
     padding: 2rem 1rem;
   }
 
@@ -727,6 +733,7 @@ body {
   }
 
   .gallery-grid {
+    padding-top: 170px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
