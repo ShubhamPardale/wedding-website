@@ -19,27 +19,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const successMessage = document.getElementById('rsvp-success');
   const submitButton = form?.querySelector('.rsvp-button');
 
+  const canvas = document.getElementById("sparkleCanvas");
+const ctx = canvas.getContext("2d");
 
-  document.addEventListener("DOMContentLoaded", function() {
-  const container = document.querySelector(".sparkle-container");
-  const isMobile = window.innerWidth <= 768;
-  const count = isMobile ? 50 : 150; // fewer sparkles on mobile
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
-  for (let i = 0; i < count; i++) {
-    const s = document.createElement("div");
-    s.classList.add("sparkle");
+// Generate sparkles
+const sparkles = [];
+const sparkleCount = window.innerWidth <= 768 ? 50 : 150; // fewer for mobile
 
-    // Random initial position
-    s.style.left = Math.random() * 100 + "%";
-    s.style.top = Math.random() * 100 + "%";
-
-    // Random animation duration and delay
-    s.style.animationDuration = 2 + Math.random() * 3 + "s";
-    s.style.animationDelay = Math.random() * 5 + "s";
-
-    container.appendChild(s);
-    }
+for (let i = 0; i < sparkleCount; i++) {
+  sparkles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2 + 1,
+    speed: Math.random() * 0.5 + 0.2,
+    opacity: Math.random(),
+    opacityChange: Math.random() * 0.02 + 0.01
   });
+}
+
+function animateSparkles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  sparkles.forEach(s => {
+    s.opacity += s.opacityChange;
+    if (s.opacity > 1 || s.opacity < 0) s.opacityChange *= -1;
+    ctx.fillStyle = `rgba(255, 250, 205, ${s.opacity})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  requestAnimationFrame(animateSparkles);
+}
+
+animateSparkles();
+  
   if (form && formContainer && successMessage && submitButton) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
