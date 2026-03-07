@@ -704,12 +704,9 @@ body {
     display: flex;
   }
 
-  .hero-name-first {
-    font-size: 1.6rem !important;
-  }
-
+  .hero-name-first,
   .hero-name-second {
-    font-size: 2rem !important;
+    font-size: 1.7rem;
   }
 }
 
