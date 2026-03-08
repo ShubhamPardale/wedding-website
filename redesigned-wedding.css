@@ -602,24 +602,21 @@ img {
 }
 
 /* ---------- Footer ---------- */
-.footer {
+.footer { 
   text-align: center;
-  padding: 3rem 1.5rem 3.5rem;
-  color: #fff7ea;           /* text color */
-  background: transparent;   /* completely transparent */
-  box-shadow: none;          /* remove any shadow if present */
-}
-
-.footer p {
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  margin: 0;
-}
-
-.footer-note {
-  margin-top: 0.5rem;
-  font-size: 1rem !important;
-  opacity: 0.9;
+  padding: 3rem 1.5rem; 
+  border-top: 1px solid rgba(139, 154, 139, 0.15); 
+  width: 100%; box-sizing: border-box; color: white; 
+} 
+.footer p { 
+  font-family: var(--font-display); 
+  font-size: 1.1rem; 
+  color: white; 
+} 
+.footer-note { 
+  font-size: 0.9rem !important; 
+  margin-top: 0.5rem; 
+  opacity: 0.8; 
 }
 
 /* ---------- Decorative effects ---------- */
