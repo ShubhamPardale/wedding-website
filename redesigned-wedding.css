@@ -799,3 +799,39 @@ img {
     padding: 1rem;
   }
 }
+@media (max-width: 600px) {
+
+  /* Remove side padding on hero */
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Make hero content full width */
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Remove side margins from sections */
+  .section,
+  .schedule-section,
+  .gallery-section,
+  .travel-section,
+  .things-section,
+  .rsvp-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Ensure background image spans edge-to-edge */
+  .hero-content::before {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+}
