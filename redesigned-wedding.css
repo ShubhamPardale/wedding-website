@@ -210,9 +210,7 @@ img {
   width: 100%;
   background:
     linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
-    url("bg1.png") center center / cover no-repeat;
-  min-height: 100vh; /* ensures full viewport height */
-  background-attachment: scroll; /* keeps image fixed during mobile scroll */
+    url("bg1.png") center top / 100% auto no-repeat; /* width fits, height scales */
   padding: 0;
 }
 
@@ -393,11 +391,10 @@ img {
 
 .page-content::before {
   content: "";
-  position: fixed;
+  position: fixed; /* desktop parallax effect */
   inset: 0;
   background:
-    linear-gradient(rgba(249, 239, 214, 0.52), rgba(249, 239, 214, 0.6)),
-    url("bg2.png") center center / cover no-repeat;
+    url("bg2.png") center top / 100% auto no-repeat; /* width fits, height scales */
   z-index: -2;
 }
 
@@ -768,12 +765,12 @@ img {
   .hero-ganpati {
     padding-top: 3.3rem;
   }
-  .hero-main,
+
   .page-content::before {
+    .page-content::before {
     position: absolute; /* mobile: scrolls with content */
     background:
       url("bg2.png") center top / 100% auto no-repeat;
-    min-height: 100dvh;
   }
 
   .section,
