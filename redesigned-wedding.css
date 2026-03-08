@@ -572,7 +572,28 @@ img {
   min-height: 110px;
   resize: vertical;
 }
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
 
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #5b4636;
+}
+
+.checkbox-option input[type="checkbox"] {
+  margin-top: 0.2rem;
+  transform: scale(1.1);
+  accent-color: #b8860b;
+}
 .rsvp-button {
   width: 100%;
   padding: 0.95rem 1.5rem;
