@@ -283,48 +283,30 @@ img {
   margin: 0 0.45rem;
 }
 
-/*.hero-name-first,
-.hero-name-second {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 600;
-  line-height: 0.95;
-  letter-spacing: 0.02em;
-  color: #7d231c;
-  text-shadow: 0 2px 16px rgba(186, 149, 82, 0.12);
-}
-
-.hero-and {
-  font-family: 'Playfair Display', serif;
-  font-weight: 300;
-  font-size: clamp(1.65rem, 4vw, 2.35rem);
-  font-style: italic;
-  letter-spacing: 0.08em;
-  color: #8d6f56;
-  text-transform: none;
-  margin: 0.6rem 0 0.45rem;
-}
-*/
-
 .hero-name-first,
 .hero-name-second {
   font-family: "Parisienne", cursive;
-  font-size: clamp(3.8rem, 8vw, 6.5rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.05;       /* consistent spacing */
   letter-spacing: 0.03em;
   color: #7d231c;
   text-shadow: 0 2px 16px rgba(186,149,82,0.15);
   margin: 0;
+  text-align: center;
+  font-size: clamp(3.8rem, 8vw, 6.5rem); /* desktop base */
 }
 
 .hero-and {
   font-family: "Libre Bodoni", serif;
-  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
   font-style: italic;
-  letter-spacing: 0.35em;
+  font-weight: 400;
+  line-height: 1.1;
   color: #8d6f56;
+  text-transform: none;
+  letter-spacing: 0.35em;
   margin: 0.4rem 0;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem); /* desktop base */
 }
 
 .hero-hashtag {
@@ -805,14 +787,15 @@ img {
 
   .hero-name-first,
   .hero-name-second {
-    font-family: "Parisienne", cursive;
-    font-size: clamp(2.45rem, 12vw, 3.5rem);
+    font-size: clamp(3rem, 10vw, 5rem);  /* slightly smaller than desktop max */
+    line-height: 1.05;                   /* match desktop */
+    letter-spacing: 0.03em;              /* same as desktop */
   }
 
   .hero-and {
-    font-family: "Libre Bodoni", serif;
-    letter-spacing: 0.15em;
-    font-size: 1.45rem;
+    font-size: clamp(1.1rem, 2vw, 1.55rem); /* closer to desktop proportion */
+    letter-spacing: 0.25em;                 /* closer to desktop 0.35em */
+    line-height: 1.1;                       /* match desktop */
   }
 
   .hero-location,
