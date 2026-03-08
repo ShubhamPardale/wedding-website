@@ -229,9 +229,17 @@ img {
 /* ---------- Blessing + invitation block using image 1 ---------- */
 .hero-main,
 .hero-content {
+  text-align: center;
   position: relative;
 }
-
+.hero-name-first,
+.hero-name-second,
+.hero-and {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .hero-content::before {
   content: "";
   position: absolute;
@@ -246,7 +254,7 @@ img {
 
 .hero-ganpati {
   text-align: center;
-  padding-top: clamp(8rem, 9vw, 12rem);
+  padding-top: clamp(12rem, 9vw, 21rem);
   margin-bottom: 0.75rem;
 }
 
@@ -470,12 +478,11 @@ img {
 .rsvp-form {
   max-width: 620px;
   margin: 0 auto;
-  background: rgba(255, 250, 240, 0.22);
-  border: 1px solid rgba(207, 177, 122, 0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 1.5rem;
+  background: rgba(255, 250, 240, 0.10);
+  border: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: none;
 }
 
 .form-row {
@@ -833,5 +840,12 @@ img {
     left: 0;
     transform: none;
   }
-
+  
+  @media (max-width: 600px) {
+  .hero-name-first,
+  .hero-name-second,
+  .hero-and {
+    width: 100%;
+    text-align: center;
+  }
 }
