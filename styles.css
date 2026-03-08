@@ -440,14 +440,14 @@ body {
 
 /* Schedule */
 .schedule-section {
-  padding-top: 170px;
-  background: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children horizontally */
 }
 
 .schedule-content {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   gap: 2rem;
 }
 
@@ -460,7 +460,6 @@ body {
 }
 
 .schedule-item h3 {
-  text-align: center;
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 500;
