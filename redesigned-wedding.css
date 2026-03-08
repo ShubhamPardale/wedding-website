@@ -755,8 +755,8 @@ img {
 
 @media (max-width: 600px) {
   .hero {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .hero-content::before {
