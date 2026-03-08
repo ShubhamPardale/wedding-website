@@ -425,19 +425,12 @@ img {
 }
 
 /* ---------- Schedule ---------- */
-.schedule-section {
-  display: flex;              /* use flex to center the grid in page */
-  justify-content: center;    /* horizontal centering */
-  padding: 2rem 0;
-}
 
-.schedule-content {
-  display: grid;
-  grid-template-columns: 1fr; /* one item per row */
-  gap: 2.5rem;                /* vertical spacing between items */
-  max-width: 400px;           /* optional: limits width */
-  width: 100%;
-  text-align: center;          /* center text inside items */
+.schedule-content { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(240px, 1fr)); 
+  gap: 3.25rem 2rem; 
+  align-items: start; 
 }
 
 .schedule-item {
