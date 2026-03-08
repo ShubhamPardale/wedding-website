@@ -372,7 +372,7 @@ img {
   position: fixed;
   inset: 0;
   background:
-    linear-gradient(rgba(249, 239, 214, 0.52), rgba(249, 239, 214, 0.6)),
+    linear-gradient(rgba(249,239,214,0.15), rgba(249,239,214,0.2)),
     url("bg2.png") center top / cover no-repeat;
   background-attachment: fixed;
   z-index: -2;
@@ -774,10 +774,15 @@ img {
 
   .hero-name-first,
   .hero-name-second {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
     font-size: clamp(2.45rem, 12vw, 3.5rem);
   }
 
   .hero-and {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
     font-size: 1.45rem;
   }
 
