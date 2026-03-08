@@ -15,7 +15,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="redesigned-wedding.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Allura&family=Dancing+Script&family=Playfair+Display:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Allura&family=Dancing+Script&family=Playfair+Display:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <canvas id="sparkleCanvas"></canvas>
@@ -53,18 +56,26 @@
           <img src="image-3.jpeg" alt="Aditya & Apurva" />
           <img src="image-4.jpeg" alt="Aditya & Apurva" />
           <img src="image-5.jpeg" alt="Aditya & Apurva" />
+          <img src="image-6.jpeg" alt="Aditya & Apurva" />
+          <img src="image-7.jpeg" alt="Aditya & Apurva" />
+          <img src="image-8.jpeg" alt="Aditya & Apurva" />
+          <img src="image-9.jpeg" alt="Aditya & Apurva" />
           <img src="image-1.jpeg" alt="Aditya & Apurva" />
           <img src="image-2.jpeg" alt="Aditya & Apurva" />
           <img src="image-3.jpeg" alt="Aditya & Apurva" />
           <img src="image-4.jpeg" alt="Aditya & Apurva" />
           <img src="image-5.jpeg" alt="Aditya & Apurva" />
+          <img src="image-6.jpeg" alt="Aditya & Apurva" />
+          <img src="image-7.jpeg" alt="Aditya & Apurva" />
+          <img src="image-8.jpeg" alt="Aditya & Apurva" />
+          <img src="image-9.jpeg" alt="Aditya & Apurva" />
         </div>
       </div>
       <!-- <div class="floral-corner floral-top-right" aria-hidden="true"></div> -->
       <!-- <div class="floral-corner floral-bottom-left" aria-hidden="true"></div> -->
       <div class="hero-main">
-        <img src="elephant.png" class="hero-elephant-left">
-        <img src="elephant.png" class="hero-elephant-right">
+        <img src="elephant.png" class="hero-elephant-left" />
+        <img src="elephant.png" class="hero-elephant-right" />
         <!-- <img
           src="bgimgright.jpeg"
           class="hero-top-right-img"
@@ -76,9 +87,9 @@
           alt="Floral Decoration"
         /> -->
         <div class="hero-ganpati">
-          <img src="ganpati-outline.png" alt="Lord Ganesha">
+          <img src="ganpati-outline.png" alt="Lord Ganesha" />
         </div>
-         <!-- Shree Ganeshaya Namah below -->
+        <!-- Shree Ganeshaya Namah below -->
         <div class="ganesh-blessing">श्री गणेशाय नमः</div>
         <div class="hero-content">
           <h2 class="hero-name-first">Aditya P</h2>
@@ -87,11 +98,11 @@
           <p class="hero-hashtag">#AdityaApurva</p>
           <p class="hero-date">April 21, 2026</p>
           <p class="hero-location">
-            Hindu Temple of Central Indiana<br> 
-            3350 N German Church Rd,<br> 
+            Hindu Temple of Central Indiana<br />
+            3350 N German Church Rd,<br />
             Indianapolis, IN.
           </p>
-          <a href="rsvp.html" class="hero-rsvp-btn">RSVP</a>
+          <a href="rsvp.html" class="hero-rsvp-btn" role="button">RSVP</a>
         </div>
         <p class="hero-tagline"></p>
       </div>
@@ -105,21 +116,21 @@
     <script src="script.js"></script>
     <div class="petals-container"></div>
 
-<!-- Scripts -->
+    <!-- Scripts -->
     <script>
-      const container = document.querySelector('.petals-container');
+      const container = document.querySelector(".petals-container");
       const totalPetals = 20; // number of petals
-    
+
       for (let i = 0; i < totalPetals; i++) {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
-    
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+
         // Random starting position
-        petal.style.left = Math.random() * 100 + 'vw';
-        petal.style.animationDuration = (5 + Math.random() * 5) + 's'; // random speed
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.animationDuration = 5 + Math.random() * 5 + "s"; // random speed
         petal.style.opacity = 0.6 + Math.random() * 0.4; // random opacity
-        petal.style.width = petal.style.height = (10 + Math.random() * 10) + 'px';
-    
+        petal.style.width = petal.style.height = 10 + Math.random() * 10 + "px";
+
         container.appendChild(petal);
       }
     </script>
