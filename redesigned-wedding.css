@@ -768,8 +768,10 @@ img {
     padding-top: 3.3rem;
   }
 
-  .page-content {
-    padding-top: 5.8rem;
+  .page-content::before {
+    position: absolute; /* scrolls with content on mobile */
+    background:
+      url("bg2.png") center top / cover no-repeat; /* solid on mobile */
   }
 
   .section,
