@@ -441,14 +441,31 @@ body {
 /* Schedule */
 .schedule-section {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* centers children horizontally */
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center children horizontally */
+  padding: 2rem 0;
+  width: 100%;            /* full width */
+  box-sizing: border-box;
+  margin-top: 5.3rem;     /* push content below fixed nav (same as hero padding-top) */
 }
 
-.schedule-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+/* Center the section title */
+.schedule-section .section-title {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+/* Center the schedule content grid */
+.schedule-section .schedule-content {
+  display: grid;
+  grid-template-columns: 1fr; /* one column per row */
+  gap: 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;          /* center text inside items */
 }
 
 .schedule-item {
