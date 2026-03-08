@@ -254,7 +254,7 @@ img {
 
 .hero-ganpati {
   text-align: center;
-  padding-top: clamp(12rem, 9vw, 21rem);
+  padding-top: clamp(12rem, 15vw, 21rem);
   margin-bottom: 0.75rem;
 }
 
