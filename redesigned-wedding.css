@@ -206,7 +206,7 @@ img {
 
 .hero-main {
   position: relative;
-  z-index: 2;
+  z-index: -2;
   width: 100%;
   background:
     linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
@@ -424,11 +424,18 @@ img {
 }
 
 /* ---------- Schedule ---------- */
+.schedule-section {
+  display: flex;
+  justify-content: center; /* centers the grid */
+}
+
 .schedule-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: 3.25rem 2rem;
   align-items: start;
+  max-width: 760px; /* optional: limits total width */
+  width: 100%;
 }
 
 .schedule-item {
@@ -769,7 +776,7 @@ img {
     background-size: cover;
     /*position: absolute; 
     background:
-      url("bg2.png") center top / cover auto no-repeat;*/
+      url("bg2.png") center top / cover no-repeat;*/
   }
 
   .section,
