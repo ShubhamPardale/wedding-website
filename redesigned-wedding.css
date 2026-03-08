@@ -205,47 +205,40 @@ img {
 }
 
 /* Hero main container */
-.hero-main {
-  position: relative;
-  width: 100%;
-  min-height: 100vh; /* full viewport height */
-  background: url("bg1.png") top center / cover no-repeat; /* desktop default */
-  background-attachment: fixed; /* parallax-like feel on desktop */
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero-main { 
+  position: relative; 
+  width: 100%; 
+  min-height: 100vh; /* full viewport height */ 
+  background: url("bg1.png") center top / cover no-repeat; /* proper alignment */ 
+  z-index: 0; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; align-items: center; 
+} 
+/* Remove unnecessary ::before on hero-content */ 
+.hero-content::before { 
+  display: none;   /* remove oversized pseudo-element */ 
+} 
+/* Optional light overlay for hero */ 
+.hero-main::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(248, 241, 230, 0.08); 
+  z-index: 1; /* overlay above bg but below content */ 
+} 
+/* Hero content stays above everything */ 
+.hero-content { 
+  position: relative; 
+  z-index: 2; 
+  text-align: center; 
+} 
+.footer { 
+  position: relative; /* ensure default stacking */ 
+  z-index: 3; /* sits above hero image */ 
+  margin-top: -6rem; /* optional: pull up to overlap hero if needed */ 
 }
 
-/* Overlay stays above background but below content */
-.hero-main::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(248, 241, 230, 0.08);
-  z-index: 1;
-}
-
-/* Hero content stays above everything */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-/* ---------- Footer overlaps hero ---------- */
-.footer {
-  position: relative;
-  z-index: 3;
-  margin-top: -6rem; /* pulls footer up over hero */
-  text-align: center;
-  padding: 3rem 1.5rem;
-  border-top: 1px solid rgba(139, 154, 139, 0.15);
-  width: 100%;
-  box-sizing: border-box;
-  color: white;
-}
 
 .hero-top-right-img,
 .hero-left-img,
