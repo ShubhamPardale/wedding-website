@@ -563,8 +563,7 @@ img {
   color: #fff7ea;
   background:
     linear-gradient(rgba(95, 31, 31, 0.5), rgba(95, 31, 31, 0.5)),
-    z-index: 1
-}
+    }
 
 .footer p {
   font-family: var(--font-display);
