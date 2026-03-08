@@ -204,31 +204,44 @@ img {
   100% { transform: translateX(-50%); }
 }
 
+/* Hero main container */
 .hero-main {
   position: relative;
   width: 100%;
   min-height: 100vh; /* full viewport height */
-  background:
-    url("bg1.png") center top / cover no-repeat; /* align at top-center and scale */
-  z-index: 0; /* keep at base layer */
+  background: url("bg1.png") center top / cover no-repeat; /* proper alignment */
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Optional overlay effect */
+/* Remove unnecessary ::before on hero-content */
+.hero-content::before {
+  display: none; /* remove oversized pseudo-element */
+}
+
+/* Optional light overlay for hero */
 .hero-main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(248, 241, 230, 0.08),
-    rgba(248, 241, 230, 0.08)
-  );
-  z-index: 1; /* overlay above bg1 but below content */
+  background: rgba(248, 241, 230, 0.08);
+  z-index: 1; /* overlay above bg but below content */
 }
 
+/* Hero content stays above everything */
 .hero-content {
   position: relative;
-  z-index: 2; /* ensures content is above background and overlay */
+  z-index: 2;
   text-align: center;
+}
+
+.footer {
+  position: relative; /* ensure default stacking */
+  z-index: 3; /* sits above hero image */
+  margin-top: -6rem; /* optional: pull up to overlap hero if needed */
 }
 
 .hero-top-right-img,
@@ -252,7 +265,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.hero-content::before {
+/*.hero-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -262,7 +275,7 @@ img {
   min-height: 1100px;
   height: 100%;
   z-index: -1;
-}
+}*/
 
 .hero-ganpati {
   text-align: center;
