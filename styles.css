@@ -441,27 +441,25 @@ body {
 /* Schedule */
 /* Push entire schedule section below fixed nav */
 .schedule-section {
-  padding-top: 5.3rem; /* same height as hero padding-top */
+  padding-top: 5.3rem; /* below nav */
   width: 100%;
-  box-sizing: border-box;
 }
 
-/* Center the section title separately */
+/* Title centered independently */
 .schedule-section .section-title {
   text-align: center;
-  margin: 0 auto 2rem; /* bottom spacing for grid */
-  max-width: 960px;     /* optional max width like other pages */
   width: 100%;
+  margin-bottom: 3rem;
 }
 
-/* Schedule items grid */
-.schedule-section .schedule-content {
+/* Schedule grid */
+.schedule-content {
   display: grid;
-  grid-template-columns: 1fr; /* one column per row on mobile by default */
+  grid-template-columns: 1fr;
   gap: 2.5rem;
-  max-width: 400px;           /* can adjust as needed */
-  margin: 0 auto;             /* center the grid horizontally */
-  text-align: center;          /* center text inside items */
+  max-width: 420px;
+  margin: 0 auto; /* centers grid */
+  text-align: center;
 }
 
 .schedule-item {
