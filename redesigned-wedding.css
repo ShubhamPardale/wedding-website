@@ -605,15 +605,15 @@ img {
 .footer {
   text-align: center;
   padding: 3rem 1.5rem 3.5rem;
-  color: #fff7ea;
-  background:
-    linear-gradient(rgba(95, 31, 31, 0.5), rgba(95, 31, 31, 0.5)),
-    url("F33FD70F-5D6E-4C3D-A297-163E1D21CEB3.jpeg") center 25% / cover no-repeat;
+  color: #fff7ea;           /* text color */
+  background: transparent;   /* completely transparent */
+  box-shadow: none;          /* remove any shadow if present */
 }
 
 .footer p {
   font-family: var(--font-display);
   font-size: 1.45rem;
+  margin: 0;
 }
 
 .footer-note {
