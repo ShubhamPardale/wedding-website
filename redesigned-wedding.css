@@ -142,23 +142,14 @@ img {
   justify-content: flex-start;
   padding: 6.5rem 1.5rem 0;
   overflow: hidden;
-  background: linear-gradient(
-      rgba(118, 85, 27, 0.18),
-      rgba(118, 85, 27, 0.08)
-    ),
-    radial-gradient(circle at top, rgba(255, 233, 185, 0.14), transparent 42%);
-}
+  background: transparent;
 
 .hero-bg,
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      rgba(61, 37, 8, 0.12),
-      rgba(61, 37, 8, 0.04)
-    ),
-    url("F33FD70F-5D6E-4C3D-A297-163E1D21CEB3.jpeg") center 18% / cover no-repeat;
+  background: transparent;
   z-index: -2;
 }
 
@@ -166,12 +157,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(14, 9, 2, 0.12),
-    rgba(14, 9, 2, 0.02) 26%,
-    rgba(14, 9, 2, 0)
-  );
+  background: transparent;
   z-index: -1;
 }
 
@@ -208,9 +194,7 @@ img {
   position: relative;
   z-index: 2;
   width: 100%;
-  background:
-    linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
-    url("bg1.png") center top / cover no-repeat;
+  background:url("bg1.png") center top / cover no-repeat;
   padding: 0;
 }
 
@@ -246,7 +230,7 @@ img {
 
 .hero-ganpati {
   text-align: center;
-  padding-top: clamp(4rem, 9vw, 7rem);
+  padding-top: clamp(5.5rem, 9vw, 9rem);
   margin-bottom: 0.75rem;
 }
 
@@ -364,8 +348,7 @@ img {
   position: fixed;
   inset: 0;
   background:
-    linear-gradient(rgba(249, 239, 214, 0.52), rgba(249, 239, 214, 0.6)),
-    url("bg2.png") / cover no-repeat;
+    url("bg2.png") / center top / cover no-repeat;
   z-index: -2;
 }
 
@@ -580,7 +563,7 @@ img {
   color: #fff7ea;
   background:
     linear-gradient(rgba(95, 31, 31, 0.5), rgba(95, 31, 31, 0.5)),
-    url("F33FD70F-5D6E-4C3D-A297-163E1D21CEB3.jpeg") center 25% / cover no-repeat;
+    z-index: 1
 }
 
 .footer p {
