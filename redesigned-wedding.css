@@ -206,18 +206,29 @@ img {
 
 .hero-main {
   position: relative;
-  z-index: -2;
   width: 100%;
-  min-height: 100vh; 
+  min-height: 100vh; /* full viewport height */
   background:
-    linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
-    url("bg1.png") center top / cover no-repeat; /* width fits, height scales */
-  padding: 0;
+    url("bg1.png") center top / cover no-repeat; /* align at top-center and scale */
+  z-index: 0; /* keep at base layer */
+}
+
+/* Optional overlay effect */
+.hero-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(248, 241, 230, 0.08),
+    rgba(248, 241, 230, 0.08)
+  );
+  z-index: 1; /* overlay above bg1 but below content */
 }
 
 .hero-content {
-  width: 100%;
-  max-width: 100%;
+  position: relative;
+  z-index: 2; /* ensures content is above background and overlay */
+  text-align: center;
 }
 
 .hero-top-right-img,
