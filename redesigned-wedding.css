@@ -218,8 +218,12 @@ img {
 }
 
 .hero-content {
-  width: 100%;
-  max-width: 100%;
+  position: relative;
+  width: min(90%, 720px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-top-right-img,
@@ -238,10 +242,8 @@ img {
 .hero-name-first,
 .hero-name-second,
 .hero-and {
-  display: block;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 .hero-content::before {
   content: "";
@@ -300,17 +302,29 @@ img {
   font-size: clamp(3.8rem, 8vw, 6.5rem); /* desktop base */
 }
 
+.hero-name-first {
+  margin: 0;
+  padding-bottom: 0.15em; /* accounts for Parisienne font's descenders */
+}
+
+.hero-name-second {
+  margin: 0;
+  padding-top: 0.15em;
+}
+
 .hero-and {
   font-family: "Libre Bodoni", serif;
   font-style: italic;
   font-weight: 400;
-  line-height: 1.1;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  letter-spacing: 0.2em;
+  line-height: 1;
   color: #8d6f56;
-  text-transform: none;
-  letter-spacing: 0.35em;
-  margin: 0.4rem 0;
+  margin: 0; /* reset margin */
+  padding: 0.9rem 0 0.1rem; /* use padding — won't collapse */
+  display: block;
+  width: 100%;
   text-align: center;
-  font-size: clamp(1.2rem, 2.2vw, 1.7rem); /* desktop base */
 }
 
 .hero-hashtag {
