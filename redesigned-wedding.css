@@ -597,6 +597,11 @@ img {
 .checkbox-option span {
   display: inline;
 }
+.checkbox-option input {
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block !important;
+}
 .rsvp-button {
   width: 100%;
   padding: 0.95rem 1.5rem;
