@@ -367,7 +367,7 @@ img {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding-top: 0;
+  padding-top: calc(1rem + 3.5rem); 
   overflow-x: hidden;
 }
 
@@ -756,6 +756,7 @@ img {
 
   .page-content::before {
     background-attachment: scroll; /* default scrolling */
+    padding-top: calc(0.7rem + 3.2rem);
     background-position: center top;
     background-size: cover;
     /*position: absolute; 
