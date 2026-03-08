@@ -439,32 +439,28 @@ body {
 }
 
 /* Schedule */
+/* Push entire schedule section below fixed nav */
 .schedule-section {
-  display: flex;
-  flex-direction: column; /* stack children vertically */
-  align-items: center;    /* center children horizontally */
-  padding: 2rem 0;
-  width: 100%;            /* full width */
+  padding-top: 5.3rem; /* same height as hero padding-top */
+  width: 100%;
   box-sizing: border-box;
-  margin-top: 5.3rem;     /* push content below fixed nav (same as hero padding-top) */
 }
 
-/* Center the section title */
+/* Center the section title separately */
 .schedule-section .section-title {
   text-align: center;
+  margin: 0 auto 2rem; /* bottom spacing for grid */
+  max-width: 960px;     /* optional max width like other pages */
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
 }
 
-/* Center the schedule content grid */
+/* Schedule items grid */
 .schedule-section .schedule-content {
   display: grid;
-  grid-template-columns: 1fr; /* one column per row */
+  grid-template-columns: 1fr; /* one column per row on mobile by default */
   gap: 2.5rem;
-  max-width: 400px;
-  width: 100%;
+  max-width: 400px;           /* can adjust as needed */
+  margin: 0 auto;             /* center the grid horizontally */
   text-align: center;          /* center text inside items */
 }
 
