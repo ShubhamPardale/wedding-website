@@ -594,6 +594,9 @@ img {
   transform: scale(1.1);
   accent-color: #b8860b;
 }
+.checkbox-option span {
+  display: inline;
+}
 .rsvp-button {
   width: 100%;
   padding: 0.95rem 1.5rem;
