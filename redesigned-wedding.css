@@ -394,7 +394,7 @@ img {
   position: fixed; /* desktop parallax effect */
   inset: 0;
   background:
-    url("bg2.png") center top / 100% auto no-repeat; /* width fits, height scales */
+    url("bg2.png") center top / cover no-repeat; /* width fits, height scales */
   z-index: -2;
 }
 
@@ -767,10 +767,12 @@ img {
   }
 
   .page-content::before {
-    .page-content::before {
-    position: absolute; /* mobile: scrolls with content */
+    background-attachment: scroll; /* default scrolling */
+    background-position: center top;
+    background-size: cover;
+    /*position: absolute; 
     background:
-      url("bg2.png") center top / 100% auto no-repeat;
+      url("bg2.png") center top / cover auto no-repeat;*/
   }
 
   .section,
