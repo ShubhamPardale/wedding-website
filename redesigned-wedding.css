@@ -424,10 +424,6 @@ img {
 }
 
 /* ---------- Schedule ---------- */
-.schedule-section {
-  display: flex;
-  justify-content: center; /* centers the grid */
-}
 
 .schedule-content {
   display: grid;
