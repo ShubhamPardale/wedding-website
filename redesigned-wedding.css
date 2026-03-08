@@ -283,9 +283,9 @@ img {
   margin: 0 0.45rem;
 }
 
-.hero-name-first,
+/*.hero-name-first,
 .hero-name-second {
-  font-family: var(--font-display);
+  font-family: 'Great Vibes', cursive;
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 600;
   line-height: 0.95;
@@ -295,14 +295,36 @@ img {
 }
 
 .hero-and {
-  font-family: var(--font-display);
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: clamp(1.65rem, 4vw, 2.35rem);
   font-style: italic;
-  font-weight: 500;
   letter-spacing: 0.08em;
   color: #8d6f56;
   text-transform: none;
   margin: 0.6rem 0 0.45rem;
+}
+*/
+
+.hero-name-first,
+.hero-name-second {
+  font-family: "Parisienne", cursive;
+  font-size: clamp(3.8rem, 8vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #7d231c;
+  text-shadow: 0 2px 16px rgba(186,149,82,0.15);
+  margin: 0;
+}
+
+.hero-and {
+  font-family: "Libre Bodoni", serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-style: italic;
+  letter-spacing: 0.35em;
+  color: #8d6f56;
+  margin: 0.4rem 0;
 }
 
 .hero-hashtag {
@@ -774,14 +796,12 @@ img {
 
   .hero-name-first,
   .hero-name-second {
-    font-family: 'Great Vibes', cursive;
-    font-weight: 400;
+    font-family: "Parisienne", cursive;
     font-size: clamp(2.45rem, 12vw, 3.5rem);
   }
 
   .hero-and {
-    font-family: 'Playfair Display', serif;
-    font-weight: 300;
+    font-family: "Libre Bodoni", serif;
     letter-spacing: 0.15em;
     font-size: 1.45rem;
   }
