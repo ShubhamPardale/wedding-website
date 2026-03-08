@@ -363,6 +363,7 @@ img {
 }
 
 /* ---------- Shared pages using image 2 ---------- */
+.hero,
 .page-content {
   position: relative;
   min-height: 100vh;
@@ -753,7 +754,7 @@ img {
   .hero-ganpati {
     padding-top: 3.3rem;
   }
-
+  .hero,
   .page-content::before {
     background-attachment: scroll; /* default scrolling */
     padding-top: calc(0.7rem + 3.2rem);
