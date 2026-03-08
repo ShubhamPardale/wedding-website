@@ -140,7 +140,7 @@ img {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 6.5rem 1.5rem 0;
+  padding:0;
   overflow: hidden;
   background: linear-gradient(
       rgba(118, 85, 27, 0.18),
@@ -246,7 +246,7 @@ img {
 
 .hero-ganpati {
   text-align: center;
-  padding-top: clamp(5.5rem, 9vw, 8rem);
+  padding-top: clamp(8rem, 9vw, 12rem);
   margin-bottom: 0.75rem;
 }
 
