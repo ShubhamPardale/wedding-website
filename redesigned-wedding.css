@@ -209,7 +209,8 @@ img {
   position: relative;
   width: 100%;
   min-height: 100vh; /* full viewport height */
-  background: url("bg1.png") center top / cover no-repeat; /* proper alignment */
+  background: url("bg1.png") top center / cover no-repeat; /* desktop default */
+  background-attachment: fixed; /* parallax-like feel on desktop */
   z-index: 0;
   display: flex;
   flex-direction: column;
@@ -217,18 +218,13 @@ img {
   align-items: center;
 }
 
-/* Remove unnecessary ::before on hero-content */
-.hero-content::before {
-  display: none; /* remove oversized pseudo-element */
-}
-
-/* Optional light overlay for hero */
+/* Overlay stays above background but below content */
 .hero-main::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(248, 241, 230, 0.08);
-  z-index: 1; /* overlay above bg but below content */
+  z-index: 1;
 }
 
 /* Hero content stays above everything */
@@ -238,10 +234,17 @@ img {
   text-align: center;
 }
 
+/* ---------- Footer overlaps hero ---------- */
 .footer {
-  position: relative; /* ensure default stacking */
-  z-index: 3; /* sits above hero image */
-  margin-top: -6rem; /* optional: pull up to overlap hero if needed */
+  position: relative;
+  z-index: 3;
+  margin-top: -6rem; /* pulls footer up over hero */
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid rgba(139, 154, 139, 0.15);
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
 }
 
 .hero-top-right-img,
@@ -815,11 +818,15 @@ img {
     padding-right: 0rem;
   }
 
-  .hero-content::before {
-    min-height: 900px;
-    background-size: cover;
+  .hero-main {
+    background-position: top center; /* keep top visible */
+    background-size: auto 120%; /* stretch vertically 20% more */
   }
 
+  .hero-content::before {
+    min-height: 110vh; /* ensure overlay matches taller hero */
+  }
+  
   .hero-name-first,
   .hero-name-second {
     font-family: "Parisienne", cursive;
@@ -862,14 +869,6 @@ img {
 
   /* Remove side padding on hero */
   .hero {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Make hero content full width */
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
