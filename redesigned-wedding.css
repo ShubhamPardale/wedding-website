@@ -208,7 +208,9 @@ img {
   position: relative;
   z-index: 2;
   width: 100%;
-  background: transparent;
+  background:
+    linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
+    url("bg1.png") center top / cover no-repeat;
   padding: 0;
 }
 
@@ -239,9 +241,6 @@ img {
   width: min(100%, 1200px);
   min-height: 1100px;
   height: 100%;
-  background:
-    linear-gradient(rgba(248, 241, 230, 0.08), rgba(248, 241, 230, 0.08)),
-    url("bg1.png") center top / cover no-repeat;
   z-index: -1;
 }
 
